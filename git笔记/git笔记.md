@@ -1,0 +1,21 @@
+- 全局设定user.name
+  - `git config --global user.name "jinpeng"`
+
+- 全局设定user.email
+  - `git config --global user.email "xxx@xxx.com"`
+
+- 查看git的配置
+  - `cat ~/.gitconfig`
+- 初始化git项目
+  - `git init`
+- 创建一个文件
+  - `touch README.md`
+- 查看当前目录的git状态
+  - `git status`
+- 将某个文件添加到git仓库（当存在一个文件时，git不知道是否需要跟踪变化）
+  - 先将文件暂存起来
+    - `git add README.md`(添加后再使用git status会发现readme.md文件变为绿色[添加前为红色])
+  - 将文件恢复到以前的状态
+    - `git rm --cached REDME.md`(此时用git status会发现readme.md文件是红色)
+- 将该目录下所有文件都加入到版本控制中
+  - `git add -A`
